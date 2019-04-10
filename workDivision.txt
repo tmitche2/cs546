@@ -1,0 +1,4 @@
+- Templates
+- CSS
+- Front end JS
+- Database

@@ -1,0 +1,23 @@
+Project Members: Taleen Mitchell, Dylan DiGeronimo, Annabelle Gartner, Naseem Miah, Ryan Locke, Jack Engel
+
+Final Project Proposal
+The ultimate guide to good drinks
+As a college student, most of us have attempted to make a delicious drink and have ended up with a pretty foul concoction. This is a guide to making tastier drinks so you can enjoy a refreshing drink at home instead of spending lots of money at the bars.
+
+Core features:
+- List the types of alcohol & other liquids you have and it will come up with drink recipes
+- Search bar for liquids, items separated by commas
+  - The home page will have the title an an explanation of what the search is supposed to do
+  - If no recipes are found, or the liquid is nonexistent, return an error statement and give a return link to the home page
+- Returns all the types of drinks you can make with those
+- Have a checklist that users can click the alcohols that they have and submit instead of typing in the liquids
+- Allow users to submit recipes
+- Create tags so people can decide how strong of a drink they want:
+  - A shot/strong drink: 20-40% alcohol content 
+  - A mixed drink: 5-20% alcohol content
+  - Casual: <5% alcohol content (alcoholic chocolates, ice cream, etc)
+
+
+Extra features:
+- Creating tags so people can sort drinks by different types of alcohol
+

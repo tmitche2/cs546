@@ -1,3 +1,0 @@
-DATABASE PROPOSAL
-
-For this project, we believe that the best database solution is

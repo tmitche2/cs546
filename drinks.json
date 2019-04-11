@@ -1,0 +1,95 @@
+[
+	{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932b",
+		"drinkName": "Moscow Mule",
+		"strength": "Strong",
+		"flavor": "sweet",
+		"alcoholTypes": ["Vodka"],
+		"ingredients": ["Ginger beer", "lime juice", "ice"],
+		"tools": ["Spoon"],
+		"glassType": "Copper mug",
+		"prepInfo": "Combine 4 oz Ginger beer, 1 1/2 oz Vodka, and 1/6 oz Lime juice in mug with ice. Stir to combine",
+		"difficulty": "Medium",
+		"Rating": 4
+	},
+    {
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932c",
+		"drinkName": "Smoker's Cough",
+		"strength": "Medium",
+		"flavor": "nasty",
+		"alcoholTypes": ["Jagermeister"],
+		"ingredients": ["Mayonnaise"],
+		"tools": ["Spoon"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Pour 1/2 ounce of Jagermeister into a shot glass and add a spoon of mayonaise",
+		"difficulty":"Very Easy",
+		"Rating": 1
+	},
+    {
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c933d",
+		"drinkName": "Prairie Chicken",
+		"strength": "Medium",
+		"flavor": "spicy",
+		"alcoholTypes": ["Gin"],
+		"ingredients": ["Salt, Pepper, Egg"],
+		"tools": ["N/A"],
+		"glassType": "Champagne Glass",
+		"prepInfo": "Pour gin into Champagne glass and crack egg. Then sprinkle the salt and pepper into the glass. ",
+		"difficulty":"Very Easy",
+		"Rating": 1
+	},
+    {
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c952c",
+		"drinkName": "The Eggermeister",
+		"strength": "Medium",
+		"flavor": "nasty",
+		"alcoholTypes": ["Jagermeister"],
+		"ingredients": ["Pickled egg"],
+		"tools": ["N/A"],
+		"glassType": "Highball Glass",
+		"prepInfo": "Pour 1 1/2 ounce Jagermeister into a highball glass and drop the pickled egg in. Chew the egg before swallowing.",
+		"difficulty":"Very Easy",
+		"Rating": 1
+	},
+    {
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c983c",
+		"drinkName": "The Cement Mixer",
+		"strength": "Weak",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Baileys"],
+		"ingredients": ["Lime Juice"],
+		"tools": ["N/A"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Pour the Baileys into a shot glass. Pour the lime juice on top. When drinking, take the shot and shake your head fast and then swallow.",
+		"difficulty":"Very Easy",
+		"Rating": 2
+	},
+    {
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c941f",
+		"drinkName": "Flaming Hot Cheeto Infused Tequila",
+		"strength": "Strong",
+		"flavor": "Spicy",
+		"alcoholTypes": ["Silver Tequila"],
+		"ingredients": ["Lime, Flaming Hot Cheetos"],
+		"tools": ["Large container"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Fill a container with 2 cups of Flaming Hot Cheetos and pour in 1 cup of tequila. Squeeze lime in if preferred. Refrigerate for 3 hours, then strain out cheetos. If anything hasn't strained, store drink in freezer for another hour before straining again. Pour into shot and enjoy!",
+		"difficulty":"Medium",
+		"Rating": 2
+	},
+    {
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c991a",
+		"drinkName": "Bloody Brain",
+		"strength": "Strong",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Strawberry Vodka", "Baileys"],
+		"ingredients": ["Rose's lime juice", "Grenadine"],
+		"tools": ["Shaker", "Straw", "Strainer"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Using the shaker, combine lime juice with vodka, and strain into shot glass. Use the straw to collect some Baileys and release it into the bottom of the shotglass. The Baileys will curdle a little bit. Continue to collect the Baileys and put it into the shotglass. This will create the look of it being a brain. Splash some grenadine on top of the shot to make it look like blood. Bottoms up!",
+		"difficulty":"Medium",
+		"Rating": 4
+	}
+    
+
+]

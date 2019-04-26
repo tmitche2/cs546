@@ -20,4 +20,13 @@ Core features:
 
 Extra features:
 - Creating tags so people can sort drinks by different types of alcohol
+- Allow users to rate recipes
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,20 @@
+Front end development: CSS & Styling
+Front end development: Handlebars/ HTML for pages
+Opening page w/ search bar & tags for strength of alcohol
+Page to show lists of recipes available
+Error page w/ link to home
+Back end development: Routing, server preparation, etc
+
+Action items, put down some items for you to do:
+
+Everyone submit 3-6 drinks to the drinks.json file
+Frontend: CSS & Templating: 
+Taleen, Annabelle, & Jack
+Backend work: 
+Dylan, Ryan, Naseem
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "chugg",
+  "version": "1.0.0",
+  "description": "Computer Homiez Ultimate Guide to Good-drinks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmitche2/cs546.git"
+  },
+  "author": "Dylan DiGeronimo, Taleen Mitchell, Anabelle Gartner, Ryan Locke, Naseem Miah, and Jack Engel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmitche2/cs546/issues"
+  },
+  "homepage": "https://github.com/tmitche2/cs546#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

@@ -3,11 +3,11 @@
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932b",
 		"drinkName": "Moscow Mule",
 		"strength": "Strong",
-		"flavor": "sweet",
+		"flavor": "Sweet",
 		"alcoholTypes": ["Vodka"],
 		"ingredients": ["Ginger beer", "lime juice", "ice"],
 		"tools": ["Spoon"],
-		"glassType": "Copper mug",
+		"glassType": "Copper Mug",
 		"prepInfo": "Combine 4 oz Ginger beer, 1 1/2 oz Vodka, and 1/6 oz Lime juice in mug with ice. Stir to combine",
 		"difficulty": "Medium",
 		"Rating": 4
@@ -16,7 +16,7 @@
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932c",
 		"drinkName": "Smoker's Cough",
 		"strength": "Medium",
-		"flavor": "nasty",
+		"flavor": "Nasty",
 		"alcoholTypes": ["Jagermeister"],
 		"ingredients": ["Mayonnaise"],
 		"tools": ["Spoon"],
@@ -29,7 +29,7 @@
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c933d",
 		"drinkName": "Prairie Chicken",
 		"strength": "Medium",
-		"flavor": "spicy",
+		"flavor": "Spicy",
 		"alcoholTypes": ["Gin"],
 		"ingredients": ["Salt, Pepper, Egg"],
 		"tools": ["N/A"],
@@ -42,7 +42,7 @@
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c952c",
 		"drinkName": "The Eggermeister",
 		"strength": "Medium",
-		"flavor": "nasty",
+		"flavor": "Nasty",
 		"alcoholTypes": ["Jagermeister"],
 		"ingredients": ["Pickled egg"],
 		"tools": ["N/A"],
@@ -89,6 +89,19 @@
 		"prepInfo": "Using the shaker, combine lime juice with vodka, and strain into shot glass. Use the straw to collect some Baileys and release it into the bottom of the shotglass. The Baileys will curdle a little bit. Continue to collect the Baileys and put it into the shotglass. This will create the look of it being a brain. Splash some grenadine on top of the shot to make it look like blood. Bottoms up!",
 		"difficulty":"Medium",
 		"Rating": 4
+	},
+	{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c691e",
+		"drinkName": "Whiskey Neat",
+		"strength": "Strong",
+		"flavor": "Spirit-Foward",
+		"alcoholTypes": ["Whiskey"],
+		"ingredients": ["N/A"],
+		"tools": ["N/A"],
+		"glassType": "Rocks Glass",
+		"prepInfo": "Pour the whiskey into the glass. Drink it. Repeat.",
+		"difficulty": "Very Easy",
+		"Rating": 5
 	}
     
 

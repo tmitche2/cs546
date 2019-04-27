@@ -36,6 +36,21 @@ main {
 
 header {
     border-bottom: 1px solid #afafaf;
+    
+}
+
+.nav-header{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgba(214, 194, 194, 0.38);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.chugg{
+    resize: 50pt;
 }
 
 h1,
@@ -117,4 +132,19 @@ label {
 
 .author-link:active {
     color: #ff0000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #fdfcff; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c7575; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6f9377; 
 }

@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 14pt;
+}
+
+body {
+    background: #bddbdb;
+    font-family: Georgia, Courier, Cambria, "Times New Roman", Times, serif;
+}
+
+main {
+
+}
+.mains {
+    direction:ltr;
+    float:left;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 12pt;
+    max-width: 47%;
+}
+
+.forms {
+    margin-left: 50%; 
+    padding: 15pt;
+    font-size: 12pt;
+    background-color: rgba(112, 174, 227, 0.53);
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+header {
+    border-bottom: 1px solid #afafaf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #222;
+    margin-bottom: 4px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h6 {
+    font-size: 1.05rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.post {
+    width: 75%;
+    border-bottom: 1px dashed #333;
+}
+
+.new-post-form {
+    max-width: 300px;
+}
+
+.new-post-form .full-width-input {
+    display: block;
+    min-height: 3em;
+    margin: 10px 0;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.error-list li {
+    color: #ff0000;
+}
+
+.author-link,
+.author-link:link {
+    color: #228b22;
+}
+
+.author-link:visited {
+    font-style: italic;
+}
+
+.author-link:hover {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.author-link:active {
+    color: #ff0000;
+}

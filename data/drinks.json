@@ -10,7 +10,7 @@
 		"glassType": "Copper Mug",
 		"prepInfo": "Combine 4 oz Ginger beer, 1 1/2 oz Vodka, and 1/6 oz Lime juice in mug with ice. Stir to combine",
 		"difficulty": "Medium",
-		"Rating": 4
+		"rating": 4
 	},
     {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932c",
@@ -23,7 +23,7 @@
 		"glassType": "Shot Glass",
 		"prepInfo": "Pour 1/2 ounce of Jagermeister into a shot glass and add a spoon of mayonaise",
 		"difficulty":"Very Easy",
-		"Rating": 1
+		"rating": 1
 	},
     {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c933d",
@@ -36,7 +36,7 @@
 		"glassType": "Champagne Glass",
 		"prepInfo": "Pour gin into Champagne glass and crack egg. Then sprinkle the salt and pepper into the glass. ",
 		"difficulty":"Very Easy",
-		"Rating": 1
+		"rating": 1
 	},
     {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c952c",
@@ -49,7 +49,7 @@
 		"glassType": "Highball Glass",
 		"prepInfo": "Pour 1 1/2 ounce Jagermeister into a highball glass and drop the pickled egg in. Chew the egg before swallowing.",
 		"difficulty":"Very Easy",
-		"Rating": 1
+		"rating": 1
 	},
     {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c983c",
@@ -62,7 +62,7 @@
 		"glassType": "Shot Glass",
 		"prepInfo": "Pour the Baileys into a shot glass. Pour the lime juice on top. When drinking, take the shot and shake your head fast and then swallow.",
 		"difficulty":"Very Easy",
-		"Rating": 2
+		"rating": 2
 	},
     {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c941f",
@@ -75,7 +75,7 @@
 		"glassType": "Shot Glass",
 		"prepInfo": "Fill a container with 2 cups of Flaming Hot Cheetos and pour in 1 cup of tequila. Squeeze lime in if preferred. Refrigerate for 3 hours, then strain out cheetos. If anything hasn't strained, store drink in freezer for another hour before straining again. Pour into shot and enjoy!",
 		"difficulty":"Medium",
-		"Rating": 2
+		"rating": 2
 	},
     {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c991a",
@@ -88,7 +88,7 @@
 		"glassType": "Shot Glass",
 		"prepInfo": "Using the shaker, combine lime juice with vodka, and strain into shot glass. Use the straw to collect some Baileys and release it into the bottom of the shotglass. The Baileys will curdle a little bit. Continue to collect the Baileys and put it into the shotglass. This will create the look of it being a brain. Splash some grenadine on top of the shot to make it look like blood. Bottoms up!",
 		"difficulty":"Medium",
-		"Rating": 4
+		"rating": 4
 	},
 	{
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c691e",
@@ -101,7 +101,20 @@
 		"glassType": "Rocks Glass",
 		"prepInfo": "Pour the whiskey into the glass. Drink it. Repeat.",
 		"difficulty": "Very Easy",
-		"Rating": 5
+		"rating": 5
+	},
+	{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c695f",
+		"drinkName": "PPD Punch",
+		"strength": "Medium",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Vodka"],
+		"ingredients": ["Pink Lemonade Mix", "Mio Energy", "Sprite", "Water"],
+		"tools": ["Garbage Can", "Garbage Bag"],
+		"glassType": "Solo Cup",
+		"prepInfo": "Double-bag trash can, insert 2-3 handles of high proof alcohol into the can. Mix in 10 liters of Sprite, an entire container of Mio Energy, 4 gallons of water, and half a container of pink lemonade mix. Stir with you arm covered with a trash bag.",
+		"difficulty": "Medium",
+		"rating": 3
 	}
     
 

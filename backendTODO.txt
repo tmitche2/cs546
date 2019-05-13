@@ -1,0 +1,6 @@
+data/drinks.js:
+- Convert alocoholTypes, ingredients, and tools into lists
+
+data/users.js:
+- Hash passwords
+- What to do if user is < 21

@@ -8,6 +8,14 @@ const statoc = express.static(__dirname + "/public");
 const configRoutes = require("./routes");
 const exphbs = require("express-handlebars");
 
+app.use(session({
+	//cookie stuff
+    name: 'AuthCookie',
+    secret: 'Professor Fred Durst is in session',
+    resave: false,
+    saveUninitialized: true
+}));
+
 app.use("/public", static);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

@@ -43,8 +43,31 @@ async function get(id) {
     return user; 
 }
 
+// Add a new drink to a user's list of created drinks
+async function addDrinkToUser(id, drinkName) {
+    if (!id) throw "You must provide an ID value";
+    if (!drinkName || typeof drinkName !== "string") throw "You must provide the name of the drink";
+
+    const userCollection = await users();
+    const user = await userCollection.findOne({ _id: id });
+    if (user === null) throw `No user with ID ${id}`;
+
+    let updatedUser = {
+        _id: user._id,
+        username: user.username,
+        password: user.password,
+        drinks: user.drinks.push(drinkName)
+    };
+
+    const updated = await animalCollection.updateOne({ _id: id }, updatedUser);
+    if (updated.modifiedCount === 0) throw `Could not update user with ID ${id}`;
+
+    return await this.get(id);
+}
+
 module.exports = {
     create,
     getUsers,
-    get
+    get,
+    addDrinkToUser
 };

@@ -12,7 +12,7 @@ dbConnection().then(
       })
       //adds Dylan to database
       .then(db => {
-        return drinks.addUser("Dylan", "diGeronimo");
+        return users.create("DylanD", "password", 21);
       })
 
       //Adds Moscow Mule under Dylan's profile

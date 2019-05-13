@@ -15,8 +15,6 @@ async function create(drinkName, strength, flavor, alcoholTypes, ingredients, to
     if (!difficulty || typeof strength !== "string") throw "You must provide a difficulty level for the drink";
     if (!rating || typeof rating !== "number") throw "You must provide a rating for this drink (on a scale of 1-5)";
 
-    // Get drink collection
-    const drinkCollection = await drinks();
     // TODO: convert alocoholTypes, ingredients, and tools into lists
     let alcoholList = [alcoholTypes];
     let ingredientList = [ingredients];
@@ -36,10 +34,34 @@ async function create(drinkName, strength, flavor, alcoholTypes, ingredients, to
         rating: rating
     };
 
+    // Get drink collection
+    const drinkCollection = await drinks();
     // Insert the drink into the mongo collection
     const insertedDrink = await drinkCollection.insertOne(newDrink);
     if (insertedDrink.insertedCount === 0) throw `Could not add ${drinkName}`;
-    
     const drink = await this.get(insertedDrink.insertedId);
+    // TODO: add drink to user
     return drink;
 }
+
+// Returns an array of all drinks 
+async function getDrinks() {
+    const drinkCollection = await drinks();
+    const drinkArray = await drinkCollection.find({}).toArray();
+    return drinkArray;
+}
+
+// Gets an animal, based on ID
+async function get(id) {
+    if (!id) throw "You must provide an ID";
+    const drinkCollection = await drinks();
+    const drink = await drinkCollection.findOne({ _id: id });
+    if (!drink) throw `No drink found with ID ${id}`;
+    return drink;
+}
+
+module.exports = {
+    create,
+    getDrinks,
+    get
+};

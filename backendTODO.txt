@@ -1,5 +1,4 @@
 data/drinks.js:
 
 data/users.js:
-- Hash passwords --> create a hashed password element of users and convert existing code to use it instead of password
 - What to do if user is < 21

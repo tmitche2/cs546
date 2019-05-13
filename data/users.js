@@ -1,6 +1,7 @@
 const collections = require("./collections");
 const users = collections.users;
 const bcrypt = require("bcrypt");
+const saltRounds = 16;
 
 // Create a new user (don't supply drinks bc a new user would have no drinks)
 async function create(username, password, age) {
@@ -8,12 +9,12 @@ async function create(username, password, age) {
     if (!password || typeof password !== "string") throw "You must supply a password";
     if (!age || typeof age !== "number") throw "You must supply the user's age";
     
-    // TODO: Hash password
     // TODO: What if they're < 21?
 
     // Create new user
     let newUser = {
         username: username,
+        hashedPassword: await bcrypt.hash(password, saltRounds),
         age: age,
         drinks: []
     };

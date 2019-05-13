@@ -18,9 +18,9 @@ async function create(drinkName, strength, flavor, alcoholTypes, ingredients, to
     // Get drink collection
     const drinkCollection = await drinks();
     // TODO: convert alocoholTypes, ingredients, and tools into lists
-    let alcoholList = [alcoholTypes];
-    let ingredientList = [ingredients];
-    let toolList = [tools];
+    let alcoholList = alcoholTypes.split(",");
+    let ingredientList = ingrediants.split(",");
+    let toolList = tools.split(",");
     
     // Create a new drink
     let newDrink = {

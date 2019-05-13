@@ -15,12 +15,10 @@ async function create(drinkName, strength, flavor, alcoholTypes, ingredients, to
     if (!difficulty || typeof strength !== "string") throw "You must provide a difficulty level for the drink";
     if (!rating || typeof rating !== "number") throw "You must provide a rating for this drink (on a scale of 1-5)";
 
-    // Get drink collection
-    const drinkCollection = await drinks();
-    // TODO: convert alocoholTypes, ingredients, and tools into lists
-    let alcoholList = alcoholTypes.split(",");
-    let ingredientList = ingrediants.split(",");
-    let toolList = tools.split(",");
+    // Convert alocoholTypes, ingredients, and tools into lists
+    let alcoholList = alcoholTypes.split(", ");
+    let ingredientList = ingredients.split(", ");
+    let toolList = tools.split(", ");
     
     // Create a new drink
     let newDrink = {
@@ -36,11 +34,13 @@ async function create(drinkName, strength, flavor, alcoholTypes, ingredients, to
         rating: rating
     };
 
+    // Get drink collection
+    const drinkCollection = await drinks();
     // Insert the drink into the mongo collection
     const insertedDrink = await drinkCollection.insertOne(newDrink);
     if (insertedDrink.insertedCount === 0) throw `Could not add ${drinkName}`;
-    
     const drink = await this.get(insertedDrink.insertedId);
+    // TODO: add drink to user
     return drink;
 }
 

@@ -1,6 +1,5 @@
 data/drinks.js:
-- Convert alocoholTypes, ingredients, and tools into lists
 
 data/users.js:
-- Hash passwords
+- Hash passwords --> create a hashed password element of users and convert existing code to use it instead of password
 - What to do if user is < 21

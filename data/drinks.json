@@ -12,7 +12,7 @@
 		"difficulty": "Medium",
 		"rating": 4
 	},
-    {
+  {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932c",
 		"drinkName": "Smoker's Cough",
 		"strength": "Medium",
@@ -25,7 +25,7 @@
 		"difficulty":"Very Easy",
 		"rating": 1
 	},
-    {
+  {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c933d",
 		"drinkName": "Prairie Chicken",
 		"strength": "Medium",
@@ -51,7 +51,7 @@
 		"difficulty":"Very Easy",
 		"rating": 1
 	},
-    {
+  {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c983c",
 		"drinkName": "The Cement Mixer",
 		"strength": "Weak",
@@ -64,7 +64,7 @@
 		"difficulty":"Very Easy",
 		"rating": 2
 	},
-    {
+  {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c941f",
 		"drinkName": "Flaming Hot Cheeto Infused Tequila",
 		"strength": "Strong",
@@ -77,7 +77,7 @@
 		"difficulty":"Medium",
 		"rating": 2
 	},
-    {
+  {
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c991a",
 		"drinkName": "Bloody Brain",
 		"strength": "Strong",

@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 // Create a new user (don't supply drinks bc a new user would have no drinks)
 async function create(username, password, age) {
     if (!username || typeof username !== "string") throw "You must supply a username";
-    if (!passwor || typeof password !== "string") throw "You must supply a password";
+    if (!password || typeof password !== "string") throw "You must supply a password";
     if (!age || typeof age !== "number") throw "You must supply the user's age";
     
     // TODO: Hash password

@@ -43,3 +43,25 @@ async function create(drinkName, strength, flavor, alcoholTypes, ingredients, to
     const drink = await this.get(insertedDrink.insertedId);
     return drink;
 }
+
+// Get an array of all the drinks
+async function getAllDrinks() {
+    const drinkCollection = await drinks();
+    const drinkArray = await drinkCollection.find({}).toArray();
+    return drinkArray;
+}
+
+// Get a drink by its drink name
+async function getDrink(drinkName) {
+    if (!drinkName) throw "You must provide the name of a drink";
+    const drinkCollection = await drinks();
+    const drink = await drinkCollection.findOne({ _drinkName: drinkName });
+    if (!drink) throw `No drink found with name ${drinkName}`;
+    return drink; 
+}
+
+module.exports = {
+    createDrink,
+    getAllDrinks,
+    getDrink
+};

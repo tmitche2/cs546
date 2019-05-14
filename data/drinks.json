@@ -113,8 +113,34 @@
 		"tools": ["Garbage Can", "Garbage Bag"],
 		"glassType": "Solo Cup",
 		"prepInfo": "Double-bag trash can, insert 2-3 handles of high proof alcohol into the can. Mix in 10 liters of Sprite, an entire container of Mio Energy, 4 gallons of water, and half a container of pink lemonade mix. Stir with you arm covered with a trash bag.",
-		"difficulty": "Medium",
+		"difficulty": "Easy",
 		"rating": 3
+	},
+	{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c6954",
+		"drinkName": "Cranberry Orange Mimosas",
+		"strength": "Light",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Champagne"],
+		"ingredients": ["Cranberries", "Orange Juice", "Lemon Juice"],
+		"tools": ["Blender"],
+		"glassType": "Champagne Flute",
+		"prepInfo": "Place 2 cups of cranberries and 1 cup of orange juice in a blender. Blend until puree. Add 2 tbsp lemon juice and 2 cups of orange juice. Blend again. Pour 1/3 cup cranberry mix into champagne flute. Top with 3/4 cup of champagne.",
+		"difficulty": "Medium",
+		"rating": 4
+	},
+	{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c696f",
+		"drinkName": "Pina Colada",
+		"strength": "Medium",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Rum"],
+		"ingredients": ["Pineapple Juice", "Cream of Coconut", "Ice"],
+		"tools": ["Blender"],
+		"glassType": "Hurricane Glass",
+		"prepInfo": "Combine 2-1/4 cups of pineapple juice and 1 can of cream of coconut into a pitcher. For each serving, add a generous cup of rum and one cup of ice to a blender. Blend well. Use pineapple wedge for rim of glass if you're feeling fancy.",
+		"difficulty": "Easy",
+		"rating": 4
 	}
     
 

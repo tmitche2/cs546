@@ -2,7 +2,7 @@ const collections = require("./collections");
 const drinks = collections.drinks;
 
 // Allow a user to create a new drink
-async function create(drinkName, strength, flavor, alcoholTypes, ingredients, tools, glassType, prepInfo, difficulty, rating) {
+async function createDrink(drinkName, strength, flavor, alcoholTypes, ingredients, tools, glassType, prepInfo, difficulty, rating) {
     // Check inputs
     if (!drinkName || typeof drinkName !== "string") throw "You must provide a name for the drink";
     if (!strength || typeof strength !== "string") throw "You must provide a strength level for the drink";

@@ -50,9 +50,23 @@ router.get("/private", (req, res) => {
     }
 });
 
-// Get drink page
+// Get drink display page
 router.get("/drink/:id", async (req, res) => {
-
+    // Get drink by using getDrink(id)
+    // Pass it to handlebars page
+    const drink = await drinks.getDrink(req.params.id);
+    res.render("../views/drink", {
+        drinkName: drink.drinkName,
+        strength: drink.strength,
+        flavor: drink.flavor,
+        alcoholTypes: drink.alcoholList,
+        ingredients: drink.ingredientList,
+        tools: drink.toolList,
+        glassType: drink.glassType,
+        prepInfo: drink.prepInfo,
+        difficulty: drink.difficulty,
+        rating: drink.rating
+    });
 });
 
 // post a new drink

@@ -5,7 +5,7 @@ const app = express();
 const drinks = require("./data/drinks");
 const users = require("./data/users");
 const statoc = express.static(__dirname + "/public");
-const configRoutes = require("./routes");
+const configRoutes = require("./routes/routes");
 const exphbs = require("express-handlebars");
 
 app.use(session({

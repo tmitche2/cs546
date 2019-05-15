@@ -5,8 +5,8 @@ const drinks = require("../data/drinks");
 const users = require("../data/users");
 const bcrypt = require("bcrypt");
 
-// POST /login
-router.post("/login", async (req,res)=>{
+// post a new login attemp
+router.post("/login", async (req, res) => {
     const info = req.body;
     if(!info.username){
         //errors if there is no username given
@@ -41,8 +41,8 @@ router.post("/login", async (req,res)=>{
     }
 });
 
-// GET /private
-router.get("/private",(req,res) =>{
+// get private page
+router.get("/private", (req, res) => {
     if(req.session.user){
         res.render("login/private",{title:"User Info",user:req.session.user});
     }else{
@@ -50,8 +50,36 @@ router.get("/private",(req,res) =>{
     }
 });
 
-// GET /logout
-router.get("/logout", (req,res)=>{
+// Get drink page
+router.get("/drink/:id", async (req, res) => {
+
+});
+
+// post a new drink
+router.post("/addDrink", async (req, res) => {
+    let drinkData = req.body;
+    // Error checking would be here, assuming drinks.create() covers it rn
+    try {
+        const newDrink = await drinks.createDrink(
+            drinkData.drinkName,
+            drinkData.strength,
+            drinkData.flavor,
+            drinkData.alcoholTypes,
+            drinkData.ingredients,
+            drinkData.tools,
+            drinkData.glassType,
+            drinkData.prepInfo,
+            drinkData.difficulty,
+            drinkData.rating
+        );
+        res.redirect(`/drinks/${newDrink._id}`);
+    } catch (e) {
+        res.status(500).json({ error: e });
+    }
+});
+
+// get log out request
+router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/login");
 });

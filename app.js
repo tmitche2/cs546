@@ -4,9 +4,10 @@ const bodyParser = require("body-parser");
 const app = express();
 const drinks = require("./data/drinks");
 const users = require("./data/users");
-const statoc = express.static(__dirname + "/public");
+const static = express.static(__dirname + "/public");
 const configRoutes = require("./routes/routes");
 const exphbs = require("express-handlebars");
+const session = require("express-session");
 
 app.use(session({
 	//cookie stuff

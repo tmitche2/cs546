@@ -5,16 +5,16 @@
 html,
 body {
     font-size: 14pt;
+    font-family: 'Lora', serif;
 }
 
 body {
-    background: #bddbdb;
-    font-family: Georgia, Courier, Cambria, "Times New Roman", Times, serif;
+    background: #FADAC1;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    color: black;
 }
 
-main {
-
-}
 .mains {
     direction:ltr;
     float:left;
@@ -34,9 +34,52 @@ main {
     border-radius: 5px;
 }
 
+.otherforms {
+    margin-left: 20%; 
+    margin-right:20%;
+    padding: 15pt;
+    font-size: 12pt;
+    background-color: rgba(112, 174, 227, 0.53);
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
 header {
     border-bottom: 1px solid #afafaf;
-    
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #411065;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+img {
 }
 
 .nav-header{
@@ -44,7 +87,7 @@ header {
     overflow: hidden;
     background-color: rgba(214, 194, 194, 0.38);
     display: block;
-    color: white;
+    color: #411065;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -53,38 +96,9 @@ header {
     resize: 50pt;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #222;
-    margin-bottom: 4px;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 1.25rem;
-}
-
-h5 {
-    font-size: 1.15rem;
-}
-
-h6 {
-    font-size: 1.05rem;
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
 }
 
 p {

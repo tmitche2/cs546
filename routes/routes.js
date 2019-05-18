@@ -17,7 +17,7 @@ const constructorMethod = app => {
     // Get drink by using getDrink(id)
     // Pass it to handlebars page
         const drink = await drinks.getDrink(req.params.id);
-        res.render("../views/drink", {
+        res.render("layouts/drink", {
             drinkName: drink.drinkName,
             strength: drink.strength,
             flavor: drink.flavor,
@@ -42,7 +42,7 @@ const constructorMethod = app => {
         if (result !== 0) { // Change to whatever Naseem's function returns when nothing found
             res.redirect(`/drinks/${result}`);
         } else {
-            res.render("../views/drinkNotFound");
+            res.render("layouts/drinkNotFound");
             return;
         }
     });

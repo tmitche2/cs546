@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 
 const logins = require("./login");
 const createActs = require("./createAct");
+const findrecipes = require("./findrecipe");
 
 // Constructor
 const constructorMethod = app => {
@@ -33,9 +34,9 @@ const constructorMethod = app => {
         });
     return;
     });
-
+    app.use("/search", findrecipes);
     // Search for a drink
-    app.post("/search", async (req, res) => {
+   /*  app.post("/search", async (req, res) => {
         let alcoholTypes = req.body.alcohols;
         let ingredients = req.body.ingredients;
         let difficulty = req.body.difficulty;
@@ -47,7 +48,7 @@ const constructorMethod = app => {
             res.render("layouts/drinkNotFound");
             return;
         }
-    });
+    }); */
 
     // Create a new account
     app.post("/createAccount", async (req, res) => {
@@ -102,6 +103,7 @@ const constructorMethod = app => {
 
     app.use("/login", logins);
     app.use("/createAcc", createActs);
+    
 
     app.use("/", (req, res) => {
         res.render("layouts/search");

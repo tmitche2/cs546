@@ -1,5 +1,4 @@
-<body>
-        <div class="mains">
+<div class="mains">
 
             <p>
                 As a college student, most of us have attempted to make a delicious drink and have ended up with a pretty foul concoction. This is a guide to making tastier drinks so you can enjoy a refreshing drink at home instead of spending lots of money at the bars.
@@ -30,12 +29,13 @@
                 Other Ingredients:<br>
                 <input type="text" name="ingredients" placeholder="Orange juice, Sprite">
                 <br> Difficulty: <br>
-                <form class="input-field">
-                    <input type="radio" name="difficulty" value="Very Easy"> Very Easy<br>
-                    <input type="radio" name="difficulty" value="Easy"> Easy<br>
-                    <input type="radio" name="difficulty" value="Medium"> Medium <br>
-                    <input type="radio" name="difficulty" value="Hard"> Hard <br>
-                </form>
+                <select class="input-field">
+                    <option value="" disabled selected>Select</option>
+                    <option value="very-easy">Very Easy</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
                 <br> Strength: <br>
                 <select class="input-field">
                     <option value="" disabled selected>Select</option>
@@ -46,4 +46,3 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </body>

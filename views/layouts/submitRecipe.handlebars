@@ -1,0 +1,44 @@
+<div class="otherforms">
+            <form action = "/search" target="POST" id="recipeform">
+                <p>Fill out the form below to submit a recipe.</p>
+                Drink Name:<br>
+                <input type="text" name="name" placeholder="Moscow Mule">
+                <br>
+                Strength: <br>
+                <form class="input-field">
+                    <input type="radio" name="difficulty" value="weak"> Weak<br>
+                    <input type="radio" name="difficulty" value="mild"> Mild<br>
+                    <input type="radio" name="difficulty" value="strong"> Strong<br><br>
+                </form>
+                Flavor: <br>
+                <input type="text" name="flavor" placeholder="Sweet, Sour">
+                <br>
+                Alcohol Type:<br>
+                <input type="text" name="alcohols" placeholder="Vodka">
+                <br>
+                Other Ingredients:<br>
+                <input type="text" name="ingredients" placeholder="Ginger Beer, Lime Juice, Ice">
+                <br>
+                Tools:<br>
+                <input type="text" name="tools" placeholder="Spoon">
+                <br>
+                Glass Type:<br>
+                <input type="text" name="glass" placeholder="Copper Mug">
+                <br>
+                Preparation:<br>
+                <textarea rows="4" cols="25" name="prep" form="recipeform">
+                Combine 4 oz Ginger beer, 1 1/2 oz Vodka, and 1/6 oz Lime juice in mug with ice. Stir to combine.
+                </textarea>
+                <br>
+                <br> Difficulty: <br>
+                select class="input-field">
+                    <option value="" disabled selected>Select</option>
+                    <option value="very-easy">Very Easy</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+                <button type="submit">Submit</button>
+                
+            </form>
+        </div>

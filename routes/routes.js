@@ -82,7 +82,7 @@ router.post("/search", async (req, res) => {
     if (result !== 0) { // Change to whatever Naseem's function returns when nothing found
         res.redirect(`/drinks/${result}`);
     } else {
-        res.render("../views/notFound");
+        res.render("../views/drinkNotFound");
     }
 });
 

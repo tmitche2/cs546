@@ -27,6 +27,6 @@ app.set("view engine", "handlebars");
 configRoutes(app);
 
 app.listen(3000, () => {
-    console.log("CHUGG running!");
+    console.log("CHUGGED running!");
     console.log("Drink up at http://localhost:3000");
 });

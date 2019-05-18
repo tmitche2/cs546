@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
-router.get("/", (req, res) => {
+const bcrypt = require("bcrypt");
+
+router.post("/", async (req, res) => {
     const info = req.body;
-    if(!info.username){
+    if(!info.login){
         //errors if there is no username given
         res.render("layouts/loginError",{error:"empty username"});
         //check here if broken
@@ -31,7 +33,7 @@ router.get("/", (req, res) => {
         return;
     }
 });
-router.get("*", (req,res)=>{
+router.get("*", async (req,res)=>{
     res.render("layouts/submitRecipe");
 });
 module.exports=router;

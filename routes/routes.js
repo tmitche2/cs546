@@ -50,25 +50,6 @@ router.get("/private", (req, res) => {
     }
 });
 
-// Get drink display page
-router.get("/drink/:id", async (req, res) => {
-    // Get drink by using getDrink(id)
-    // Pass it to handlebars page
-    const drink = await drinks.getDrink(req.params.id);
-    res.render("../views/drink", {
-        drinkName: drink.drinkName,
-        strength: drink.strength,
-        flavor: drink.flavor,
-        alcoholTypes: drink.alcoholList,
-        ingredients: drink.ingredientList,
-        tools: drink.toolList,
-        glassType: drink.glassType,
-        prepInfo: drink.prepInfo,
-        difficulty: drink.difficulty,
-        rating: drink.rating
-    });
-});
-
 // post a new drink
 router.post("/addDrink", async (req, res) => {
     let drinkData = req.body;
@@ -90,6 +71,38 @@ router.post("/addDrink", async (req, res) => {
     } catch (e) {
         res.status(500).json({ error: e });
     }
+});
+
+// Search for a drink
+router.post("/search", async (req, res) => {
+    let alcoholTypes = req.body.alcohols;
+    let ingredients = req.body.ingredients;
+    let strength = req.body.strength; // Check parameter name once handlebars has been updated
+    let result = await drinks.functionNaseemIsWritingLol(alcoholTypes, ingredients, strength); // Change to Naseem's function name
+    if (result !== 0) { // Change to whatever Naseem's function returns when nothing found
+        res.redirect(`/drinks/${result}`);
+    } else {
+        res.render("../views/notFound");
+    }
+});
+
+// Get drink display page
+router.get("/drink/:id", async (req, res) => {
+    // Get drink by using getDrink(id)
+    // Pass it to handlebars page
+    const drink = await drinks.getDrink(req.params.id);
+    res.render("../views/drink", {
+        drinkName: drink.drinkName,
+        strength: drink.strength,
+        flavor: drink.flavor,
+        alcoholTypes: drink.alcoholList,
+        ingredients: drink.ingredientList,
+        tools: drink.toolList,
+        glassType: drink.glassType,
+        prepInfo: drink.prepInfo,
+        difficulty: drink.difficulty,
+        rating: drink.rating
+    });
 });
 
 // get log out request

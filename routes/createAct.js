@@ -22,6 +22,9 @@ router.post("/", (req, res) => {
         res.render("layouts/loginError",{error:"You must give an age"});
         return 1;
     }
+    else{
+        res.render("layouts/submitRecipe");
+    }
 });
 router.get("*", (req,res)=>{
     res.render("layouts/submitRecipe");

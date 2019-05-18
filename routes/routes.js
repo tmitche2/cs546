@@ -43,6 +43,7 @@ router.post("/login", async (req, res) => {
     }else{
         //username or password was incorrect
         res.render("login/error",{error:"username or password error",title:"login"});
+        return;
     }
 });
 
@@ -75,6 +76,7 @@ router.post("/addDrink", async (req, res) => {
         res.redirect(`/drinks/${newDrink._id}`);
     } catch (e) {
         res.status(500).json({ error: e });
+        return;
     }
 });
 
@@ -89,6 +91,7 @@ router.post("/search", async (req, res) => {
         res.redirect(`/drinks/${result}`);
     } else {
         res.render("../views/drinkNotFound");
+        return;
     }
 });
 
@@ -109,6 +112,7 @@ router.get("/drink/:id", async (req, res) => {
         difficulty: drink.difficulty,
         rating: drink.rating
     });
+    return;
 });
 
 // get log out request

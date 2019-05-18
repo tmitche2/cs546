@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CREATE ACCOUNT</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/createaccount.css">
+</head>
+<header>
+    <div class="container">
+        <div class="nav-header">
+                <ul>
+                    <h1 id="login"><i href="/logo.jpg" class="header"></i>LOGIN</h1>
+                    <a href="main.html">Home</a>
+
+                </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <body>
+        <div class="forms">
+            <form action="/search" target="POST">
+                Enter Name:<br>
+                <input type="text" name="name" placeholder="Name">
+                <br>
+                Enter Email: <br>
+                <input type="text" name="email" placeholder="Email">
+                <br>
+                Choose Password:<br>
+                <input type="text" name="password" placeholder="Password">
+                </select><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</main>
+<link rel="stylesheet" href="/public/createaccount.css">
+
+</html>

@@ -324,5 +324,158 @@
 		"difficulty": "Hard",
 		"rating": 3
 	},
+	{
+		"_id": "c5d0fd87-7977-4fc5-9088-33d0347c932b",
+		"drinkName": "White Russian",
+		"strength": "Medium",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Vodka", "Kahlua"],
+		"ingredients": ["Heavy Cream"],
+		"tools": ["Shaker"],
+		"glassType": "High Ball Glass",
+		"prepInfo": "Combine 2 oz Vodka, 1 oz Kahlua, and 1/2 oz Heavy Cream to a shaker, shake well and pour over ice.",
+		"difficulty": "Medium",
+		"rating": 3
+},
+
+{
+		"_id": "c8d0fd67-7937-4fc5-9088-33d0347c932b",
+		"drinkName": "Irish Coffee",
+		"strength": "Medium",
+		"flavor": "Bitter",
+		"alcoholTypes": ["Whiskey"],
+		"ingredients": ["Hot Coffee", "Brown Sugar", "Whipped Cream"],
+		"tools": ["Spoon"],
+		"glassType": "Glass Coffee Mug",
+		"prepInfo": "Make one cup of coffee, heat 1 1/2 oz whiskey and 1 tsp brown sugar in glass (do not boil) and pour into coffee. Top with whipped cream.",
+		"difficulty": "Medium",
+		"rating": 3
+},
+
+{
+		"_id": "c5d0fd67-7977-4fd5-9088-33d0347c932b",
+		"drinkName": "Long Island Iced Tea",
+		"strength": "Strong",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Vodka", "Rum", "Gin", "Tequila", "Triple Sec"],
+		"ingredients": ["Sweet and Sour Mix", "Coca Cola", "Lemon Slice"],
+		"tools": ["Spoon"],
+		"glassType": "Pint Glass",
+		"prepInfo": "Combine 1/2 oz of vodka, 1/2 oz of rum, 1/2 oz of gin, 1/2 oz of tequila and 1/2 oz of triple sec into a pint glass full of ice. Top glass off with coca cola, stir and serve.",
+		"difficulty": "Medium",
+		"rating": 5
+},
+
+{
+		"_id": "c5d1fd67-7977-4fc5-9088-33d0347c932b",
+		"drinkName": "Painkiller",
+		"strength": "Strong",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Rum"],
+		"ingredients": ["Pineapple juice", "Orange juice", "Cream of Coconut", "Nutmeg", "Pineapple slice"],
+		"tools": ["Shaker"],
+		"glassType": "Snifter Glass",
+		"prepInfo": "Combine 2 oz of rum, 4 oz of pineapple juice, 1 oz of orange juice, and 1 oz of cream of coconut to a shaker with ice. Shake well, pour over ice, garnish with a slice of pineapple and ground nutmeg. Serve.",
+		"difficulty": "Hard",
+		"rating": 4
+},
+
+{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0367c932b",
+		"drinkName": "Bee's Knees",
+		"strength": "Medium",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Gin"],
+		"ingredients": ["Lemon juice", "Honey syrup", "Lemon twist"],
+		"tools": ["Shaker"],
+		"glassType": "Cocktail Glass",
+		"prepInfo": "Combine 2 oz of Gin, 3/4 oz of lemon juice, and 1/2 oz of honey syrup to a shaker full of ice. Shake well, pour over ice and serve.",
+		"difficulty": "Medium",
+		"rating": 3
+},
+
+{
+		"_id": "c5d0fd67-7977-4fc5-9088-33d0345c932b",
+		"drinkName": "Shot of Vodka",
+		"strength": "Strong",
+		"flavor": "Potato Alcohol",
+		"alcoholTypes": ["Vodka"],
+		"ingredients": ["n/a"],
+		"tools": ["n/a"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Pour 2 oz of vodka into shot glass. Serve.",
+		"difficulty": "Easy",
+		"rating": 5
+},
+
+{
+		"_id": "c5d0fd67-7933-4fc5-9088-33d0347c932b",
+		"drinkName": "Shot of Tequila",
+		"strength": "Strong",
+		"flavor": "Gasoline",
+		"alcoholTypes": ["Tequila"],
+		"ingredients": ["Salt", "Lime"],
+		"tools": ["n/a"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Pour 2 oz of tequila into a shot glass. Serve with salt and a slice of lime.",
+		"difficulty": "Easy",
+		"rating": 5
+},
+
+{
+		"_id": "c5d0dd67-7977-4fc5-9088-33d0347c932b",
+		"drinkName": "Hanky Panky",
+		"strength": "Strong",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Gin", "Sweet Vermouth"],
+		"ingredients": ["Fernet-Branca"],
+		"tools": ["Cocktail glass", "Spoon"],
+		"glassType": "Chilled Cocktail Glass",
+		"prepInfo": "Combine 1 1/2 oz of gin, 1 1/2 oz of sweet vermouth, and 2 dashes of fernet-branca into a glass with ice and stir. Strain, pour over ice, and stir.",
+		"difficulty": "Medium",
+		"rating": 3
+},
+
+{
+		"_id": "c5d0dd67-79d7-4fc5-9088-33d0347c932b",
+		"drinkName": "Pickleback Shot",
+		"strength": "Strong",
+		"flavor": "Salty",
+		"alcoholTypes": ["Whiskey"],
+		"ingredients": ["Pickle juice"],
+		"tools": ["n/a"],
+		"glassType": "2 Shot Glasses",
+		"prepInfo": "Pour one shot of whiskey and one shot of pickle juice into separate shot glasses. Take pickle juice shot first and chase with whiskey shot. Enjoy the burn.",
+		"difficulty": "Easy",
+		"rating": 3
+},
+
+{
+		"_id": "c5d0fd67-7977-4fc5-9c88-33d0347c932b",
+		"drinkName": "Snake Bite",
+		"strength": "Strong",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Whiskey"],
+		"ingredients": ["Lime juice"],
+		"tools": ["Shaker"],
+		"glassType": "Shot Glass",
+		"prepInfo": "Pour 2 oz of honey flavored whiskey and 1/2 an oz of lime juice into a shaker with ice. Shake well and serve.",
+		"difficulty": "Easy",
+		"rating": 5
+},
+
+{
+		"_id": "c5d0fd67-79c7-4fc5-9088-33d0c47c932b",
+		"drinkName": "Kitchen Sink",
+		"strength": "Strong",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Gin", "Rum", "Triple sec", "Vodka"],
+		"ingredients": ["Mint leaves", "Simple syrup", "Lemon-lime soda", "Lime wedges"],
+		"tools": ["Shaker", "Spoon"],
+		"glassType": "Pint Glass",
+		"prepInfo": "Muddle mint leaves in the bottom of a shaker. Add ice to shaker. Add 2 oz of gin, 2 oz of rum, 2 oz of triple sec, 2 oz of vodka, 2 oz of simple syrup, and 8 oz of lemon lime soda to shaker. Shake vigorously, strain and pour into glass.",
+		"difficulty": "Easy",
+		"rating": 5
+}
 
 ]

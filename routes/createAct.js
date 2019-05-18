@@ -5,7 +5,7 @@ const users = require("../data/users");
 
 router.post("/", (req, res) => {
     const info = req.body;
-    console.log("FUCKing hell");
+    //console.log("FUCKing hell");
     if(!info.name){
         //errors if there is no username given
         res.render("layouts/loginError",{error:"No username given"});
@@ -21,6 +21,9 @@ router.post("/", (req, res) => {
         //errors if there is no password given
         res.render("layouts/loginError",{error:"You must give an age"});
         return 1;
+    }
+    else{
+        res.render("layouts/submitRecipe");
     }
 });
 router.get("*", (req,res)=>{

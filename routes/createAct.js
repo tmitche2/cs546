@@ -22,6 +22,11 @@ router.post("/", (req, res) => {
         res.render("layouts/loginError",{error:"You must give an age"});
         return 1;
     }
+    if(info.age<21){
+        //errors if under 21
+        res.render("layouts/loginError",{error:"You're under 21, child. You can't make an account!"});
+        return 1;
+    }
     else{
         res.render("layouts/submitRecipe");
     }

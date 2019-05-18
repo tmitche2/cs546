@@ -5,6 +5,11 @@ const drinks = require("../data/drinks");
 const users = require("../data/users");
 const bcrypt = require("bcrypt");
 
+
+router.use("/", (req, res) => {
+    res.render("layouts/search");
+});
+
 // post a new login attemp
 router.post("/login", async (req, res) => {
     const info = req.body;

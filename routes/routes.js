@@ -10,6 +10,18 @@ router.use("/", (req, res) => {
     res.render("layouts/search");
 });
 
+
+router.get("/loginpage", (req, res)=>{
+    res.render("layouts/login");
+});
+router.get("/submitrecipe", (req, res)=>{
+    res.render("layouts/submitrecipe");
+});
+router.get("/createAccount", (req, res)=>{
+    res.render("layouts/createAccount");
+});
+
+
 // post a new login attemp
 router.post("/login", async (req, res) => {
     const info = req.body;

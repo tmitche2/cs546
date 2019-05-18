@@ -6,6 +6,7 @@ const users = require("../data/users");
 const bcrypt = require("bcrypt");
 
 const logins = require("./login");
+const createActs = require("./createAct");
 
 // Constructor
 const constructorMethod = app => {
@@ -100,6 +101,7 @@ const constructorMethod = app => {
     });
 
     app.use("/login", logins);
+    app.use("/createAcc", createActs);
 
     app.use("/", (req, res) => {
         res.render("layouts/search");

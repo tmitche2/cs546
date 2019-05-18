@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+const users = require("../data/users");
 
 router.post("/", async (req, res) => {
     const info = req.body;
@@ -15,10 +16,10 @@ router.post("/", async (req, res) => {
         res.render("layouts/loginError",{error:"empty password"});
         return 1;
     }
-    let user = data.filter(function(user){
+    let user = users.getUsers(function(user){
         return user.username === info.username;
     });
-    let passwordTruth = bcrypt.compare(info.password, user[0].hashedPassword);
+    let passwordTruth = await bcrypt.compare(info.password, user[0].hashedPassword);
     if(user[0]!= undefined && passwordTruth){
         //checks the password against the hashed password, and searches for user
         //password correct

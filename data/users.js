@@ -44,6 +44,15 @@ async function get(id) {
     return user; 
 }
 
+// Get one user by their username
+async function getByUsername(un) {
+    if (!un) throw "You must provide an ID";
+    const userCollection = await users();
+    const user = await userCollection.findOne({ username: un });
+    if (!user) throw `No user found with username ${un}`;
+    return user;
+}
+
 // Add a new drink to a user's list of created drinks
 async function addDrinkToUser(id, drinkName) {
     if (!id) throw "You must provide an ID value";
@@ -70,5 +79,6 @@ module.exports = {
     create,
     getUsers,
     get,
+    getByUsername,
     addDrinkToUser
 };

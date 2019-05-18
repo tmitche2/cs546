@@ -16,13 +16,14 @@ router.post("/", async (req, res) => {
         res.render("layouts/loginError",{error:"empty password"});
         return 1;
     }
-    let userArray = await users.getUsers();
-    let user = userArray.filter(user => user.username == info.login);
+    // let userArray = await users.getUsers();
+    // let user = userArray.filter(user => user.username == info.login);
+    let user = users.getByUsername(info.login);
     const passwordTruth = await bcrypt.compare(info.password, user.hashedPassword);
     if(user !== undefined && passwordTruth){
         //checks the password against the hashed password, and searches for user
         //password correct
-        let newUser = user
+        let newUser = user;
         delete newUser.hashedPassword;
         delete newUser.Password;
         req.session.user = newUser;

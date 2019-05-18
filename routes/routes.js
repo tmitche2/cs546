@@ -78,7 +78,7 @@ router.post("/search", async (req, res) => {
     let alcoholTypes = req.body.alcohols;
     let ingredients = req.body.ingredients;
     let strength = req.body.strength; // Check parameter name once handlebars has been updated
-    let result = await drinks.functionNaseemIsWritingLol(alcoholTypes, ingredients, strength); // Change to Naseem's function name
+    let result = await drinks.filterDrinks(alcoholTypes, ingredients, strength); // Change to Naseem's function name
     if (result !== 0) { // Change to whatever Naseem's function returns when nothing found
         res.redirect(`/drinks/${result}`);
     } else {

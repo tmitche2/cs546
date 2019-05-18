@@ -60,8 +60,37 @@ async function getDrink(drinkName) {
     return drink; 
 }
 
+async function filterDrinks(alcoholList, ingredients, difficulty, strength) {
+    if (typeof alcoholList != 'undefined'){
+        const drinkCollection = await drinks();
+        const drinksList = await drinkCollection.find({ _alcoholTypes: alcoholList }).toArray();
+    }
+    else if (typeof ingredients != 'undefined'){
+        const drinkCollection = await drinks();
+        const drinksList = await drinkCollection.find({ _ingredients: ingredients }).toArray();
+    }
+    else if (typeof difficulty != 'undefined'){
+        const drinkCollection = await drinks();
+        const drinksList = await drinkCollection.find({ _difficulty: difficulty }).toArray();   
+    }
+    else {
+        const drinkCollection = await drinks();
+        const drinksList = await drinkCollection.find({ _strength: strength }).toArray();   
+    }
+    
+    //have to further specify list based on other form inputs
+
+    if (!drinksList){
+        return 0;
+    }
+    else{
+        return drinksList; 
+    } 
+}
+
 module.exports = {
     createDrink,
     getAllDrinks,
-    getDrink
+    getDrink,
+    filterDrinks
 };

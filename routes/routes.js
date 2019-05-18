@@ -10,19 +10,6 @@ router.use("/", (req, res) => {
     res.render("layouts/search");
 });
 
-
-router.get("/loginPage", (req, res)=>{
-    res.render("layouts/login");
-});
-
-router.get("/submitRecipePage", (req, res)=>{
-    res.render("layouts/submitrecipe");
-});
-
-router.get("/createAccountPage", (req, res)=>{
-    res.render("layouts/createAccount");
-});
-
 // post a new login attemp
 router.post("/login", async (req, res) => {
     const info = req.body;
@@ -142,6 +129,15 @@ router.get("/logout", (req, res) => {
 
 // Constructor
 const constructorMethod = app => {
+    app.get("/loginPage", (req, res) =>{
+        res.render("layouts/login");
+    });
+    app.get("/createAccountPage", (req, res) =>{
+        res.render("layouts/createAccount");
+    });
+    app.get("/submitRecipePage", (req, res) =>{
+        res.render("layouts/submitRecipe");
+    });
     app.use("/", router);
     app.use("*", (req, res) => {
         res.status(404);

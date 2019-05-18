@@ -4,5 +4,3 @@ data/users.js:
 - What to do if user is < 21
 
 routes:
-- POST/addDrink: redirect to GET /drink/:id
-- GET /drink/:id

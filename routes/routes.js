@@ -11,16 +11,17 @@ router.use("/", (req, res) => {
 });
 
 
-router.get("/loginpage", (req, res)=>{
+router.get("/loginPage", (req, res)=>{
     res.render("layouts/login");
 });
-router.get("/submitrecipe", (req, res)=>{
+
+router.get("/submitRecipePage", (req, res)=>{
     res.render("layouts/submitrecipe");
 });
-router.get("/createAccount", (req, res)=>{
+
+router.get("/createAccountPage", (req, res)=>{
     res.render("layouts/createAccount");
 });
-
 
 // post a new login attemp
 router.post("/login", async (req, res) => {
@@ -59,15 +60,6 @@ router.post("/login", async (req, res) => {
     }
 });
 
-// get private page
-router.get("/private", (req, res) => {
-    if(req.session.user){
-        res.render("login/private",{title:"User Info",user:req.session.user});
-    }else{
-        res.render("login/error",{error:"please login",title:"Error"});
-    }
-});
-
 // post a new drink
 router.post("/addDrink", async (req, res) => {
     let drinkData = req.body;
@@ -90,6 +82,21 @@ router.post("/addDrink", async (req, res) => {
         res.status(500).json({ error: e });
         return;
     }
+});
+
+// Create a new account
+router.post("/createAccount", async (req, res) => {
+    let name = req.body.name;
+    let password = req.body.password;
+    let age = req.body.age;
+    try {
+        await users.create(name, password, age);
+        res.redirect("/createAccountPage");
+    } catch (e) {
+        res.status(500).json({ error: e });
+        return;
+    }
+
 });
 
 // Search for a drink

@@ -308,11 +308,21 @@
 		"tools": ["N/A"],
 		"glassType": "Hurricane Glass",
 		"prepInfo": "Cut lemon and orange into slices. Add 1/2 cup sugar and 1/2 cup water into saucepan with lemon and orange slices. Stir until sugar dissolves. Squeeze juice from cooked fruit into syrup & discard. Combine extra fruit, syrup, 1 bottle wine wine, 1.5 cups carbonated water, and 2 tablespoons brandy.",
-		"difficulty": "Very Easy",
+		"difficulty": "Medium",
 		"rating": 4
-	}
-	
-
-    
+	},
+	{
+		"_id": "c5d6fd67-7991-4fc5-9088-33d0347c696f",
+		"drinkName": "Chocolate-Cream Liqueur",
+		"strength": "Light",
+		"flavor": "Sweet",
+		"alcoholTypes": ["Whiskey", "Rum"],
+		"ingredients": ["Cream", "Milk", "Coffee", "Egg", "Chocolate syrup", "Vanilla"],
+		"tools": ["Saucepan"],
+		"glassType": "Hurricane Glass",
+		"prepInfo": "Combine 2 cups light cream, 1 1/4 cups condensed milk, and 2 teaspoons instant coffee crystals in a saucepan. Stir over medium heat till crystals dissolve. Stir half of the mixture into beaten egg yolk and return to saucepan. Bring to boil. Cook and stir over medium heat for 2 mins. Remove saucepan from heat. Add 1 cup irish whiskey, 1/3 cup rum, 2 tablespoons chocolate syrup, and 1 tablespoon vanilla in a saucepan. Stir well. Put into a container and chill for at least 4 hours. Shake before serving.",
+		"difficulty": "Hard",
+		"rating": 3
+	},
 
 ]

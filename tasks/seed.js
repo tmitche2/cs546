@@ -1,45 +1,31 @@
 const dbConnection = require("../data/connection");
-const data = require("../data/");
+const data = require("../data");
+const drinksList = data.drinks.json;
 const drinks = data.drinks;
-const users = data.users;
+// const users = data.users;
 
-dbConnection().then(
-  db => {
-    return db
-      .dropDatabase()
-      .then(() => {
-        return dbConnection;
-      })
-      //adds Dylan to database
-      .then(db => {
-        return users.create("DylanD", "password", 21);
-      })
+const main = async () => {
+  const db = await dbConnection();
+  await db.dropDatabase();
 
-      //Adds Moscow Mule under Dylan's profile
-      .then(Dylan => {
-        const id = Dylan._id;
-
-        return drinks
-          .create("Moscow Mule", "Strong", "Sweet",
-          ["Vodka"], ["Ginger beer", "lime juice", "ice"],
-          "Spoon", "Copper Mug", "Combine 4 oz Ginger beer, 1 1/2 oz Vodka, and 1/6 oz Lime juice in mug with ice. Stir to combine",
-          "Medium", 4)
-
-          .then(() => {
-            return drinks.create();
-          })
-
-          .then(() => {
-            return drinks.create();
-          });
-      })
-
-      .then(() => {
-        console.log("Done seeding database");
-        db.close();
-      });
-  },
-  error => {
-    console.error(error);
+  for (var i = 0; i < drinksList.length; i++){
+    var obj = drinksList[i];
+    const drinkName = obj.drinkName;
+    const strength = obj.strength;
+    const flavor = obj.flavor;
+    const alcoholTypes = obj.alcoholTypes;
+    const ingredients = obj.ingredients;
+    const tools = obj.tools;
+    const glassType = obj.glassType;
+    const prepInfo = obj.prepInfo;
+    const difficulty = obj.difficulty;
+    const rating = obj.rating;
+    await drinks.createDrink(drinkName, strength, flavor, alcoholTypes, ingredients, tools, glassType, prepInfo, difficulty, rating);
   }
-);
+
+  console.log("Done seeding database");
+  await db.serverConfig.close();
+  return;
+}
+
+main().catch(console.log);

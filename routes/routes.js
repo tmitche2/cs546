@@ -17,8 +17,8 @@ const constructorMethod = app => {
     });
     // Get drink display page
     app.get("/drink/:id", async (req, res) => {
-    // Get drink by using getDrink(id)
-    // Pass it to handlebars page
+        // Get drink by using getDrink(id)
+        // Pass it to handlebars page
         const drink = await drinks.getDrink(req.params.id);
         res.render("layouts/drink", {
             drinkName: drink.drinkName,
@@ -32,10 +32,12 @@ const constructorMethod = app => {
             difficulty: drink.difficulty,
             rating: drink.rating
         });
-    return;
+        return;
     });
+
     app.use("/search", findrecipes);
-    // Search for a drink
+
+    // Old /search route
    /*  app.post("/search", async (req, res) => {
         let alcoholTypes = req.body.alcohols;
         let ingredients = req.body.ingredients;

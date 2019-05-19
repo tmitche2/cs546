@@ -2,18 +2,31 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const users = require("../data/users");
+const drinks = require("../data/drinks")
 
 router.post("/", (req, res) => {
-    const info = req.body;
-    //console.log("FUCKing hell");
-    if(!info.alcohols){
-        //errors if there is no username given
+    const alcoholTypes = req.body.alcohols;
+    const ingredients = req.body.ingredients;
+    const difficulty = req.body.difficulty;
+    const strength = req.body.strength;
+    if(!alcoholTypes){
         res.render("layouts/loginError",{error:"No alcohol given. We only give alcoholic drinks."});
         //check here if broken
         return 1;
-    }
-    else{
-        res.render("layouts/drink");
+    } else {
+        let drink = await drinks.filterDrinks(alcoholTypes, ingredients, difficulty, strength); 
+        res.render("layouts/drink", {
+            drinkName: drink.drinkName,
+            strength: drink.strength,
+            flavor: drink.flavor,
+            alcoholTypes: drink.alcoholList,
+            ingredients: drink.ingredientList,
+            tools: drink.toolList,
+            glassType: drink.glassType,
+            prepInfo: drink.prepInfo,
+            difficulty: drink.difficulty,
+            rating: drink.rating
+        });
     }
 });
 router.get("*", (req,res)=>{

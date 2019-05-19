@@ -3,13 +3,13 @@ userList = [
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932b",
 		"age": 21,
 		"username": "Taleen",
-		"password": "PutHere"
+		"password": "cs546"
   },
   {
 		"_id": "c5d0dd67-7977-4fc5-9088-33d0347c932c",
 		"age": 30,
 		"username": "Barresi",
-		"password": "PutHere"
+		"password": "javascriptRules"
 	}  
 ]
 

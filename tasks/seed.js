@@ -28,7 +28,7 @@ const main = async () => {
   }
 
   // Seed users
-  console.log("Seeding users");
+  console.log("Seeding users (this might take some time)");
   for (let i = 0; i < userList.length; i++) {
     const user = userList[i];
     const username = user.username;

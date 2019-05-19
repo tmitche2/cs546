@@ -106,8 +106,7 @@ const constructorMethod = app => {
 
     app.use("/login", logins);
     app.use("/createAcc", createActs);
-    
-    
+    app.use("/addDrink", submitrecipes ) ;   
 
     app.use("/", (req, res) => {
         res.render("layouts/search");

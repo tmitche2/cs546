@@ -38,8 +38,21 @@ router.post("/", (req, res) => {
         res.render("layouts/loginError",{error:"No instructions given"});
         return 1;
     } */
+
+    
     else{
-        res.render("layouts/drink");
+        res.render("layouts/drink", {
+            drinkName: info.drinkName,
+            strength: info.strength,
+            flavor: info.flavor,
+            alcoholTypes: info.alcoholTypes,
+            ingredients: info.ingredients,
+            tools: info.tools,
+            glassType: info.glassType,
+            prepInfo: info.prepInfo,
+            difficulty: info.difficulty,
+            rating: info.rating 
+        });
     }
 });
 router.get("*", (req,res)=>{

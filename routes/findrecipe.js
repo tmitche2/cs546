@@ -15,17 +15,14 @@ router.post("/", async (req, res) => {
         try {
             let drinkList = await drinks.filterDrinks(alcoholTypes, ingredients, difficulty, strength);
             const topResult = drinkList.shift();
-            
-
-            console.log(`${topResult.drinkName}`);
 
             res.render("layouts/drink", {
                 drinkName: topResult.drinkName,
                 strength: topResult.strength,
                 flavor: topResult.flavor,
-                alcoholTypes: topResult.alcoholList,
-                ingredients: topResult.ingredientList,
-                tools: topResult.toolList,
+                alcoholTypes: topResult.alcoholTypes,
+                ingredients: topResult.ingredients,
+                tools: topResult.tools,
                 glassType: topResult.glassType,
                 prepInfo: topResult.prepInfo,
                 difficulty: topResult.difficulty,
@@ -38,6 +35,6 @@ router.post("/", async (req, res) => {
     }
 });
 router.get("*", (req,res)=>{
-    res.render("layouts/submitRecipe");
+    res.render("layouts/mainPage");
 });
 module.exports=router;

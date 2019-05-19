@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcrypt");
-const users = require("../data/users");
 const drinks = require("../data/drinks")
 
 router.post("/", async (req, res) => {
@@ -20,8 +18,11 @@ router.post("/", async (req, res) => {
             console.log("I got here 3");
             let drinkList = await drinks.filterDrinks(alcoholTypes, ingredients, difficulty, strength);
             const topResult = drinkList.shift();
-            console.log("I got here 4");
-            res.redirect("layouts/drink", {
+            
+
+            console.log(`${drinkList}`);
+
+            res.render("layouts/drink", {
                 drinkName: topResult.drinkName,
                 strength: topResult.strength,
                 flavor: topResult.flavor,

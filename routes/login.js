@@ -19,11 +19,13 @@ router.post("/", async (req, res) => {
     // let userArray = await users.getUsers();
     // let user = userArray.filter(user => user.username == info.login);
     let user = users.getByUsername(info.login);
-    try{
-        const passwordTruth = await bcrypt.compare(info.password, user.hashedPassword);
+    let passwordTruth = false;
+    try {
+        passwordTruth = bcrypt.compare(info.password, user.hashedPassword);
     } catch(e) {
         res.render("layouts/loginError",{error:"Unable to log in"});
-        return 1;;
+        console.log(e);
+        return 1;
     }
     
     if(user !== undefined && passwordTruth){

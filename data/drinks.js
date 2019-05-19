@@ -17,26 +17,29 @@ async function createDrink(drinkName, strength, flavor, alcoholTypes, ingredient
 
     // Convert alocoholTypes, ingredients, and tools into lists if they aren't already
     if (typeof alcoholTypes == "string") {
-        alcoholTypes = alcoholTypes.split(", ");
+        let alcoholList = alcoholTypes.split(", ");
+    } else {
+        let alcoholList = alcoholTypes;
     }
     if (typeof ingredients == "string") {
-        ingredients = ingredients.split(", ");
+        let ingredientList = ingredients.split(", ");
+    } else {
+        let ingredientList = ingredients;
     }
     if (typeof tools == "string") {
-        tools = tools.split(", ");
-    }
-    // let alcoholList = alcoholTypes.split(", ");
-    // let ingredientList = ingredients.split(", ");
-    // let toolList = tools.split(", ");
+        let toolList = tools.split(", ");
+    } else {
+        let toolList = tools;
+    }   
     
     // Create a new drink
     let newDrink = {
         drinkName: drinkName,
         strength: strength,
         flavor: flavor,
-        alcoholTypes: alcoholTypes,
-        ingredients: ingredients,
-        tools: tools,
+        alcoholTypes: alcoholList,
+        ingredients: ingredientList,
+        tools: toolList,
         glassType: glassType,
         prepInfo: prepInfo,
         difficulty: difficulty,

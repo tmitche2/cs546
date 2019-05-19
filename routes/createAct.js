@@ -17,6 +17,16 @@ router.post("/", (req, res) => {
         res.render("layouts/loginError",{error:"No password given"});
         return 1;
     }
+    if(!info.password2){
+        //errors if there is no password given
+        res.render("layouts/loginError",{error:"Need to comfirm password"});
+        return 1;
+    }
+    if(info.password != info.password2){
+        //errors if there is no password given
+        res.render("layouts/loginError",{error:"Passwords do not match"});
+        return 1;
+    }
     if(!info.age){
         //errors if there is no password given
         res.render("layouts/loginError",{error:"You must give an age"});

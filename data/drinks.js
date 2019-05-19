@@ -93,11 +93,11 @@ async function filterDrinks(alcoholList, ingredients, difficulty, strength) {
         drinksList.filter(drinks => drinks.includes(ingredients));
     }
 
-    // if(difficulty !== undefined){
+    // if(difficulty.length !== 0){
     //     drinksList.filter(drinks => drinks.includes(difficulty));
     // }
 
-    // if(strength !== undefined){
+    // if(strength.length !== 0){
     //     drinksList.filter(drinks => drinks.includes(strength));
     // }
 

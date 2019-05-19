@@ -89,10 +89,10 @@ async function filterDrinks(alcoholList, ingredients, difficulty, strength) {
     //returns list of drinks that match input parameters
     const drinksList = await drinkCollection.find(
         {$or:[
-            { _alcoholTypes: alcoholList },
-            { _ingredients: ingredients },
-            { _difficulty: difficulty },
-            { _strength: strength }
+            { "alcoholTypes": alcoholList },
+            { "ingredients": ingredients },
+            { "difficulty": difficulty },
+            { "strength": strength }
         ]}).toArray();
 
     if (!drinksList){

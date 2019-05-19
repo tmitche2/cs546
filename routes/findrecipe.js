@@ -20,15 +20,15 @@ router.post("/", async (req, res) => {
             const topResult = drinkList.shift();
             
 
-            console.log(`${drinkList}`);
+            console.log(`${topResult.drinkName}`);
 
             res.render("layouts/drink", {
                 drinkName: topResult.drinkName,
                 strength: topResult.strength,
                 flavor: topResult.flavor,
-                alcoholTypes: topResult.alcoholList,
-                ingredients: topResult.ingredientList,
-                tools: topResult.toolList,
+                alcoholTypes: topResult.alcoholList.toString(),
+                ingredients: topResult.ingredientList.toString(),
+                tools: topResult.toolList.toString(),
                 glassType: topResult.glassType,
                 prepInfo: topResult.prepInfo,
                 difficulty: topResult.difficulty,

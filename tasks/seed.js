@@ -1,15 +1,14 @@
 const dbConnection = require("../data/connection");
-const data = require("../data");
-const drinksList = data.drinks.json;
-const drinks = data.drinks;
-// const users = data.users;
+const drinks = require("../data/drinks");
+const drinkListFile = require("../data/drinkList");
+const drinkList = drinkListFile.drinkList;
 
 const main = async () => {
   const db = await dbConnection();
   await db.dropDatabase();
 
-  for (var i = 0; i < drinksList.length; i++){
-    var obj = drinksList[i];
+  for (var i = 0; i < drinkList.length; i++){
+    var obj = drinkList[i];
     const drinkName = obj.drinkName;
     const strength = obj.strength;
     const flavor = obj.flavor;

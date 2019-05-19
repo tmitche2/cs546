@@ -1,4 +1,4 @@
-[
+drinkList = [
 	{
 		"_id": "c5d0fd67-7977-4fc5-9088-33d0347c932b",
 		"drinkName": "Moscow Mule",
@@ -479,3 +479,5 @@
 }
 
 ]
+
+module.exports = {drinkList};

@@ -7,27 +7,36 @@ async function createDrink(drinkName, strength, flavor, alcoholTypes, ingredient
     if (!drinkName || typeof drinkName !== "string") throw "You must provide a name for the drink";
     if (!strength || typeof strength !== "string") throw "You must provide a strength level for the drink";
     if (!flavor || typeof flavor !== "string") throw "You must provide a flavor for the drink";
-    if (!alcoholTypes || typeof alcoholTypes !== "string") throw "You must provide a list of the alcohol in the drink";
-    if (!ingredients || typeof ingredients !== "string") throw "You must provide a list of the non-alcoholic ingredients for the drink";
-    if (!tools || typeof tools !== "string") throw "You must provide a list of any tools you need to make the drink";
+    if (!alcoholTypes) throw "You must provide a list of the alcohol in the drink";
+    if (!ingredients) throw "You must provide a list of the non-alcoholic ingredients for the drink";
+    if (!tools) throw "You must provide a list of any tools you need to make the drink";
     if (!glassType || typeof glassType !== "string") throw "You must provide the type of glass used for the drink";
     if (!prepInfo || typeof strength !== "string") throw "You must provide the instructions to make the drink";
     if (!difficulty || typeof strength !== "string") throw "You must provide a difficulty level for the drink";
     if (!rating || typeof rating !== "number") throw "You must provide a rating for this drink (on a scale of 1-5)";
 
-    // Convert alocoholTypes, ingredients, and tools into lists
-    let alcoholList = alcoholTypes.split(", ");
-    let ingredientList = ingredients.split(", ");
-    let toolList = tools.split(", ");
+    // Convert alocoholTypes, ingredients, and tools into lists if they aren't already
+    if (typeof alcoholTypes == "string") {
+        alcoholTypes = alcoholTypes.split(", ");
+    }
+    if (typeof ingredients == "string") {
+        ingredients = ingredients.split(", ");
+    }
+    if (typeof tools == "string") {
+        tools = tools.split(", ");
+    }
+    // let alcoholList = alcoholTypes.split(", ");
+    // let ingredientList = ingredients.split(", ");
+    // let toolList = tools.split(", ");
     
     // Create a new drink
     let newDrink = {
         drinkName: drinkName,
         strength: strength,
         flavor: flavor,
-        alcoholTypes: alcoholList,
-        ingredients: ingredientList,
-        tools: toolList,
+        alcoholTypes: alcoholTypes,
+        ingredients: ingredients,
+        tools: tools,
         glassType: glassType,
         prepInfo: prepInfo,
         difficulty: difficulty,

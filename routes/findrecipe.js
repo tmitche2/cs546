@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const users = require("../data/users");
 const drinks = require("../data/drinks")
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
     const alcoholTypes = req.body.alcohols;
     const ingredients = req.body.ingredients;
     const difficulty = req.body.difficulty;

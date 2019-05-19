@@ -48,7 +48,7 @@ async function createDrink(drinkName, strength, flavor, alcoholTypes, ingredient
     // Insert the drink into the mongo collection
     const insertedDrink = await drinkCollection.insertOne(newDrink);
     if (insertedDrink.insertedCount === 0) throw `Could not add ${drinkName}`;
-    const drink = await this.get(insertedDrink.insertedId);
+    const drink = await this.getDrinkByID(insertedDrink.insertedId);
     // TODO: add drink to user
     return drink;
 }
@@ -66,6 +66,14 @@ async function getDrink(drinkName) {
     const drinkCollection = await drinks();
     const drink = await drinkCollection.findOne({ _drinkName: drinkName });
     if (!drink) throw `No drink found with name ${drinkName}`;
+    return drink; 
+}
+
+async function getDrinkByID(id) {
+    if (!id) throw "You must provide the name of a drink";
+    const drinkCollection = await drinks();
+    const drink = await drinkCollection.findOne({ _id: id });
+    if (!drink) throw `No drink found with id ${id}`;
     return drink; 
 }
 
@@ -92,5 +100,6 @@ module.exports = {
     createDrink,
     getAllDrinks,
     getDrink,
+    getDrinkByID,
     filterDrinks
 };

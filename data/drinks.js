@@ -87,13 +87,19 @@ async function getDrinkByID(id) {
 async function filterDrinks(alcoholList, ingredients, difficulty, strength) {
     const drinkCollection = await drinks();
     //returns list of drinks that match input parameters
-    const drinksList = await drinkCollection.find(
-        {$or:[
-            { "alcoholTypes": alcoholList },
-            { "ingredients": ingredients },
-            { "difficulty": difficulty },
-            { "strength": strength }
-        ]}).toArray();
+    const drinksList = await drinkCollection.find({ "alcoholTypes": alcoholList }).toArray();
+
+    if(ingredients.length !== 0){
+        drinksList.filter(drinks => drinks.includes(ingredients));
+    }
+
+    // if(difficulty !== undefined){
+    //     drinksList.filter(drinks => drinks.includes(difficulty));
+    // }
+
+    // if(strength !== undefined){
+    //     drinksList.filter(drinks => drinks.includes(strength));
+    // }
 
     if (!drinksList){
         return 0;

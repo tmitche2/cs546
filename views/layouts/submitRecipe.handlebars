@@ -1,20 +1,15 @@
 <div class="otherforms">
-            <form method="POST" action="/addDrink" id="recipeform">
+            <form method="POST" action="/addDrink">
                 <p>Fill out the form below to submit a recipe.</p>
                 Drink Name:<br>
-                <input type="text" name="name" placeholder="Moscow Mule">
+                <input type="text" name="drinkName" placeholder="Moscow Mule">
                 <br>
-                Strength: <br>
-                <form class="input-field">
-                    <input type="radio" name="difficulty" value="weak"> Weak<br>
-                    <input type="radio" name="difficulty" value="mild"> Mild<br>
-                    <input type="radio" name="difficulty" value="strong"> Strong<br><br>
-                </form>
+                
                 Flavor: <br>
                 <input type="text" name="flavor" placeholder="Sweet">
                 <br>
                 Alcohol Type:<br>
-                <input type="text" name="alcohols" placeholder="Vodka">
+                <input type="text" name="alcoholTypes" placeholder="Vodka">
                 <br>
                 Other Ingredients:<br>
                 <input type="text" name="ingredients" placeholder="Ginger Beer, Lime Juice, Ice">
@@ -28,7 +23,13 @@
                 Preparation:<br>
                 <textarea rows="4" cols="25" name="prep" form="recipeform">
                 </textarea>
-                <br>
+                <br> Strength: <br>
+                <select class="input-field">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Weak">Weak</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Strong">Strong</option>
+                </select>
                 <br> Difficulty: <br>
                 <select class="input-field">
                     <option value="" disabled selected>Select</option>

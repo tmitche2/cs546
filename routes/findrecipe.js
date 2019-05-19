@@ -35,6 +35,6 @@ router.post("/", async (req, res) => {
     }
 });
 router.get("*", (req,res)=>{
-    res.render("layouts/mainPage");
+    res.render("layouts/submitRecipe");
 });
 module.exports=router;

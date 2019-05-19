@@ -16,21 +16,23 @@ router.post("/", async (req, res) => {
         res.render("layouts/loginError",{error:"empty password"});
         return 1;
     }
-    // let userArray = await users.getUsers();
-    // let user = userArray.filter(user => user.username == info.login);
-    let user = users.getByUsername(info.login);
+    let user;
+    try {
+        user = await users.getByUsername(info.login);
+    } catch (error) {
+        res.render("layouts/loginError", {error: "Incorrect username"});
+        return 1;
+    }
+   
     let passwordTruth = false;
     try {
-        passwordTruth = bcrypt.compare(info.password, user.hashedPassword);
+        passwordTruth = await bcrypt.compare(info.password, user.hashedPassword);
     } catch(e) {
         res.render("layouts/loginError",{error:"Unable to log in"});
-        console.log(e);
         return 1;
     }
     
-    if(user !== undefined && passwordTruth){
-        //checks the password against the hashed password, and searches for user
-        //password correct
+    if(user !== undefined && passwordTruth == true){
         let newUser = user;
         delete newUser.hashedPassword;
         delete newUser.Password;

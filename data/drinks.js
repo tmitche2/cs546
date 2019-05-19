@@ -16,20 +16,24 @@ async function createDrink(drinkName, strength, flavor, alcoholTypes, ingredient
     if (!rating || typeof rating !== "number") throw "You must provide a rating for this drink (on a scale of 1-5)";
 
     // Convert alocoholTypes, ingredients, and tools into lists if they aren't already
+    let alcoholList = [];
+    let ingredientList = [];
+    let toolList = [];
+
     if (typeof alcoholTypes == "string") {
-        let alcoholList = alcoholTypes.split(", ");
+        alcoholList = alcoholTypes.split(", ");
     } else {
-        let alcoholList = alcoholTypes;
+        alcoholList = alcoholTypes;
     }
     if (typeof ingredients == "string") {
-        let ingredientList = ingredients.split(", ");
+        ingredientList = ingredients.split(", ");
     } else {
-        let ingredientList = ingredients;
+        ingredientList = ingredients;
     }
     if (typeof tools == "string") {
-        let toolList = tools.split(", ");
+        toolList = tools.split(", ");
     } else {
-        let toolList = tools;
+        toolList = tools;
     }   
     
     // Create a new drink

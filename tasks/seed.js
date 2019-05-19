@@ -30,7 +30,7 @@ const main = async () => {
   // Seed users
   console.log("Seeding users");
   for (let i = 0; i < userList.length; i++) {
-    const user = array[i];
+    const user = userList[i];
     const username = user.username;
     const password = user.password;
     const age = user.age;

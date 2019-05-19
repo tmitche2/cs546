@@ -8,6 +8,7 @@ const bcrypt = require("bcrypt");
 const logins = require("./login");
 const createActs = require("./createAct");
 const findrecipes = require("./findrecipe");
+const submitrecipes = require("./submitrecipe");
 
 // Constructor
 const constructorMethod = app => {
@@ -66,9 +67,9 @@ const constructorMethod = app => {
         }
 
     });
-
+    app.use("/addDrink", submitrecipes);
     // post a new drink
-    app.post("/addDrink", async (req, res) => {
+    /* app.post("/addDrink", async (req, res) => {
         let drinkData = req.body;
         // Error checking would be here, assuming drinks.create() covers it rn
         try {
@@ -89,7 +90,7 @@ const constructorMethod = app => {
             res.status(500).json({ error: e });
             return;
         }
-    });
+    }); */
 
     app.get("/loginPage", (req, res) =>{
         res.render("layouts/login");
@@ -105,6 +106,7 @@ const constructorMethod = app => {
 
     app.use("/login", logins);
     app.use("/createAcc", createActs);
+    
     
 
     app.use("/", (req, res) => {
